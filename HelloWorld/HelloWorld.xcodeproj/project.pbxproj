@@ -15,6 +15,9 @@
 		2898E2511C0EF61800EE0DCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2898E2501C0EF61800EE0DCE /* Assets.xcassets */; };
 		2898E2541C0EF61800EE0DCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2898E2521C0EF61800EE0DCE /* LaunchScreen.storyboard */; };
 		2898E25E1C0F001A00EE0DCE /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898E25D1C0F001A00EE0DCE /* Enemy.swift */; };
+		2898E2601C0F5BBF00EE0DCE /* ArmoredEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898E25F1C0F5BBF00EE0DCE /* ArmoredEnemy.swift */; };
+		2898E2621C0F6DE600EE0DCE /* Shoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898E2611C0F6DE600EE0DCE /* Shoot.swift */; };
+		2898E2641C0F6F9600EE0DCE /* MoveProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898E2631C0F6F9600EE0DCE /* MoveProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		2898E2531C0EF61800EE0DCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2898E2551C0EF61800EE0DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2898E25D1C0F001A00EE0DCE /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enemy.swift; path = ../Enemy.swift; sourceTree = "<group>"; };
+		2898E25F1C0F5BBF00EE0DCE /* ArmoredEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArmoredEnemy.swift; sourceTree = "<group>"; };
+		2898E2611C0F6DE600EE0DCE /* Shoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shoot.swift; sourceTree = "<group>"; };
+		2898E2631C0F6F9600EE0DCE /* MoveProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoveProtocol.swift; path = ../MoveProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				2898E25D1C0F001A00EE0DCE /* Enemy.swift */,
+				2898E25F1C0F5BBF00EE0DCE /* ArmoredEnemy.swift */,
 				2898E2451C0EF61800EE0DCE /* AppDelegate.swift */,
 				2898E2471C0EF61800EE0DCE /* GameScene.sks */,
 				2898E2491C0EF61800EE0DCE /* GameScene.swift */,
@@ -69,6 +76,8 @@
 				2898E2501C0EF61800EE0DCE /* Assets.xcassets */,
 				2898E2521C0EF61800EE0DCE /* LaunchScreen.storyboard */,
 				2898E2551C0EF61800EE0DCE /* Info.plist */,
+				2898E2611C0F6DE600EE0DCE /* Shoot.swift */,
+				2898E2631C0F6F9600EE0DCE /* MoveProtocol.swift */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -145,10 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2898E2641C0F6F9600EE0DCE /* MoveProtocol.swift in Sources */,
 				2898E25E1C0F001A00EE0DCE /* Enemy.swift in Sources */,
 				2898E24A1C0EF61800EE0DCE /* GameScene.swift in Sources */,
 				2898E24C1C0EF61800EE0DCE /* GameViewController.swift in Sources */,
+				2898E2601C0F5BBF00EE0DCE /* ArmoredEnemy.swift in Sources */,
 				2898E2461C0EF61800EE0DCE /* AppDelegate.swift in Sources */,
+				2898E2621C0F6DE600EE0DCE /* Shoot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

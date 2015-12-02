@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-class Enemy {
+class Enemy:MoveProtocol {
    
     struct InitialPosition {
         var posX:Int;
@@ -65,6 +65,14 @@ class Enemy {
             print("Play enemy moving Animation")
             
         }
+    }
+    
+    func startMove() {
+        print("Enemy start moviment !")
+    }
+    
+    func stopMove() {
+        print("Enemy stop moviment !")
     }
     
 }

@@ -20,49 +20,35 @@ class GameScene: SKScene {
     let weapon = ("shuriken",100)
     let enemy:Enemy = Enemy()
     let enemy2:Enemy = Enemy(healthpoints: 200)
+    let armoredEnemy:ArmoredEnemy = ArmoredEnemy()
     var enemiesList:Array<Enemy> = Array<Enemy>()
     
-    
     override func didMoveToView(view: SKView) {
+        let shoot:Shoot = Shoot()
+        let moveable1:MoveProtocol = enemy2
+        let moveable2:MoveProtocol = shoot
+        moveable1.startMove()
+        moveable2.startMove()
+    }
+    
+    func orderAllEnemiesToAttack() {
+        for (var i = 0 ; i < enemiesList.count ; i++){
+            
+            if let storedEnemy = enemiesList[i] as? ArmoredEnemy {
+                storedEnemy.blastAttack()
+            }else{
+                enemiesList[i].doAttack()
+            }
         
-        var integerhp = Int(hp)
-        print("Position x \(xPosition)")
-        print("Position y \(yPosition)")
-        print("Weapon Type \(weapon.1) Weapon Damage \(weapon.0)")
-        print("HP integer part \(integerhp)")
-        print("Enemy healthPoints \(enemy.healthpoints)")
-        print("Enemy 2 healthPoints \(enemy2.healthpoints)")
-        print("Enemy state \(enemy.enemystate)")
-        enemy.doAttack()
-        enemy.receivePlayerAttack(200, weapon: "Sword")
-       
-        //enemiesList.append(enemy)
-        //enemiesList.append(enemy2)
-        
-        //print("Health points of enemy at 0 \(enemiesList[0].healthpoints)")
-        //print("Health points of enemy at 1 \(enemiesList[1].healthpoints)")
-        
-        //enemiesList.removeAtIndex(0)
-        
-        //print("Health points of enemy at 0 \(enemiesList[0].healthpoints)")
-        //print("Enemies left \(enemiesList.count)")
-        
-        print("Power strike damage \(enemy.doPowerStrike(xPosition, playerY:yPosition))")
-        print("Power strike damage \(enemy.doPowerStrike(xPosition, playerY:yPosition))")
-        
-        enemy.playAnimationByCurrentState()
-        enemy.enemystate = Enemy.EnemyState.Attacking
-        enemy.playAnimationByCurrentState()
-        
-        createEnemies(10)
-        print("Created \(enemiesList.count) new enemies")
-        
+        }
     }
     
     func createEnemies(quantity:Int) {
         for (var i = 1 ; i <= quantity ; i++) {
             enemiesList.append(Enemy())
         }
+        
+        enemiesList.append(ArmoredEnemy())
     }
     
 }
