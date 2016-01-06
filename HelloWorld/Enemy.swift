@@ -9,8 +9,10 @@
 import Foundation
 import SpriteKit
 
-class Enemy:MoveProtocol {
+class Enemy:SKSpriteNode , MoveProtocol {
    
+    
+    
     struct InitialPosition {
         var posX:Int;
         var posY:Int;
@@ -25,13 +27,10 @@ class Enemy:MoveProtocol {
     var healthpoints:Int = 0
     var enemystate:EnemyState = EnemyState.Idle
     var powerStrikeCharge:Int = 1
-    var name:String?
+    var monsterName:String?
     
-    init() {
-        
-    }
-    
-    init(healthpoints:Int) {
+    convenience init(healthpoints:Int) {
+        self.init(imageNamed:"monster")
         self.healthpoints = healthpoints
     }
     
@@ -74,5 +73,7 @@ class Enemy:MoveProtocol {
     func stopMove() {
         print("Enemy stop moviment !")
     }
+    
+    
     
 }
