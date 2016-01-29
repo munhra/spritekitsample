@@ -10,7 +10,7 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    let player = SKSpriteNode(imageNamed: "spaceShip")
+    let player = SKSpriteNode(imageNamed: "Spaceship")
     let background = SKSpriteNode(imageNamed: "background")
 
 
